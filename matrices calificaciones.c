@@ -1,11 +1,11 @@
 #include <stdio.h>
 /*funcion para el promedio por estudiante*/
-void promedioporestudiante ( float *ptr[], int estudiantes ); 
+void promedioporestudiante ( float *ptr, int estudiantes ); 
 int main() {
     int estudiantes;
     int i, j;
     float *ptr; /*uso de punteros en la matriz*/
-
+    void promedioporestudiante; 
     printf("Ingrese la cantidad de estudiantes: ");
     scanf("%d", &estudiantes);
 
@@ -36,7 +36,7 @@ int main() {
 
     return 0;
 }
-    float promedioporestudiante ( float *ptr[], int estudiantes ){ 
+    void promedioporestudiante ( float *ptr[], int estudiantes ){ 
     printf("\n===== PROMEDIO POR ESTUDIANTE =====\n");
 
     for(i = 0; i < estudiantes; i++) {
