@@ -5,23 +5,22 @@ int main() {
     int estudiantes;
     int i, j;
     float *ptr; /*uso de punteros en la matriz*/
-    void promedioporestudiante; 
     printf("Ingrese la cantidad de estudiantes: ");
     scanf("%d", &estudiantes);
 
     
-    float ptr= &notas[estudiantes][3];
+    float promedioporestudiante (&notas[estudiantes][3]);
     /*ingreso de notas*/
     for(i = 0; i < estudiantes; i++) {
         printf("\nEstudiante %d\n", i + 1);
 
         for(j = 0; j < 3; j++) {
             printf("Ingrese la nota de la materia %d: ", j + 1);
-            scanf("%f", ((*ptr[i][j]));
+            scanf("%f", ((*ptr));
         }
     }
 
-    printf("Estudiante %d: %.2f\n", i + 1, suma / 3);
+    printf("Estudiante %d: %.2f\n", i + 1,(*ptr));
     printf("\n===== PROMEDIO POR MATERIA =====\n");
 
     for(j = 0; j < 3; j++) {
@@ -36,17 +35,18 @@ int main() {
 
     return 0;
 }
-    void promedioporestudiante ( float *ptr[], int estudiantes ){ 
+    void promedioporestudiante ( float *ptr, int estudiantes ){ 
+    int i, j;
     printf("\n===== PROMEDIO POR ESTUDIANTE =====\n");
 
     for(i = 0; i < estudiantes; i++) {
         float suma = 0;
 
         for(j = 0; j < 3; j++) {
-            suma += *ptr[i][j];
+            suma += *ptr;
         }
 
         
-        return suma/3; 
+        return *ptr; 
     }
     }
